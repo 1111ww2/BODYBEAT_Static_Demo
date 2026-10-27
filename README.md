@@ -1,21 +1,5 @@
 # BODY//BEAT — Static Demo
 
-## Usage
-
-Extract the whole ZIP and open **index.html in Chrome**. No installation or server is needed. Keep the accompanying folders beside the HTML file.
-
-- Click the display QR code to wake the phone; follow the original phone flow.
-- On the fitting page, click **Simulate wearing sensors**, then start on the phone.
-- During play, click the four floating hand/foot buttons, or use **Q / W / A / S**. Faster alternating steps increase forward speed.
-- Use the phone to pause, finish, replay memories, post, and change accessibility settings.
-- The small top-left icons provide full screen, restart, and help. Hints appear only when needed. Reloading clears demo data.
-
-For GitHub Pages, upload this folder’s contents with **index.html at the repository root**. Select **Settings → Pages → Deploy from a branch → main → /(root)**. Keep `.nojekyll`. [GitHub publishing guide](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-## Code Maintenance
-
-`index.html` is the entry point; `demo/presentation.css` controls the device layout; `demo/runtime.js` contains the bundled phone, display, and browser simulation. `assets/` holds the original media. MP3 script wrappers preserve the audio bytes and allow local playback and recording without a server. `licenses/` retains library notices.
-
 ## Interface Guidelines
 
 The original interfaces and device proportions are preserved. The two devices fit the desktop viewport without page scrolling; the phone’s own pages still scroll normally. Simulation controls float over the presentation. Language, text size, contrast, reduced motion, read-aloud, and hearing feedback remain available. Participants and sensors are simulated within one tab; there is no real device connection or shared online storage.
