@@ -1,5 +1,5 @@
 (() => {
-  // js/shared/identity.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/identity.js
   function uid() {
     if (globalThis.crypto?.randomUUID) return crypto.randomUUID();
     const bytes = new Uint8Array(16);
@@ -8,7 +8,7 @@
     return Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("");
   }
 
-  // demo/samples.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/demo/samples.js
   var tracks = [
     [
       "floating",
@@ -95,7 +95,7 @@
     };
   }
 
-  // demo/state.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/demo/state.js
   var limbs = ["leftArm", "rightArm", "leftLeg", "rightLeg"];
   var now = () => performance.now() / 1e3;
   var clone = (value) => structuredClone(value);
@@ -476,7 +476,7 @@
     };
   }
 
-  // demo/media.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/demo/media.js
   var pending = /* @__PURE__ */ new Map();
   window.bodybeatAssetBytes = /* @__PURE__ */ Object.create(null);
   function mediaURL(path) {
@@ -513,7 +513,7 @@
     return pending.get(path);
   }
 
-  // demo/presentation.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/demo/presentation.js
   var $ = (selector) => document.querySelector(selector);
   var display = $("#display");
   var phone = $("#phone");
@@ -7334,7 +7334,7 @@ var qrcode = function() {
 }));
 <\/script>
     <script>(() => {
-  // js/experience/narration.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/narration.js
   var Narration = class {
     cancel() {
       this.generation = (this.generation || 0) + 1;
@@ -7407,7 +7407,7 @@ var qrcode = function() {
     }
   };
 
-  // js/shared/video.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/video.js
   function loopVideo(name, className = "") {
     const base = \`assets/video/\${name}\`;
     return \`<video class="\${className}" data-loop-video autoplay loop muted playsinline preload="auto" poster="\${base}.jpg" aria-hidden="true" disablepictureinpicture><source src="\${base}.mp4" type="video/mp4"></video>\`;
@@ -7443,7 +7443,7 @@ var qrcode = function() {
     }
   });
 
-  // js/i18n.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/i18n.js
   var languages = [
     ["zh-CN", "\\u7B80\\u4F53\\u4E2D\\u6587"],
     ["zh-TW", "\\u7E41\\u9AD4\\u4E2D\\u6587"],
@@ -7755,7 +7755,7 @@ var qrcode = function() {
     if (!englishSources.has(english)) englishSources.set(english, source);
   }
 
-  // js/guides.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/guides.js
   var ink = "#f0ecf6";
   var accent = "#c7afe9";
   var clamp = (x) => Math.max(0, Math.min(1, x));
@@ -7873,7 +7873,7 @@ var qrcode = function() {
     });
   }
 
-  // js/shared/identity.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/identity.js
   function uid() {
     if (globalThis.crypto?.randomUUID) return crypto.randomUUID();
     const bytes = new Uint8Array(16);
@@ -7882,7 +7882,7 @@ var qrcode = function() {
     return Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("");
   }
 
-  // js/shared/api.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/api.js
   var demo = window.parent.bodybeatDemo;
   if (!demo) {
     location.replace(new URL("index.html", location.href));
@@ -7893,7 +7893,7 @@ var qrcode = function() {
   var upload = (kind, blob) => demo.upload(kind, blob);
   var storage = demo.storage;
 
-  // js/shared/ui.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/ui.js
   var $ = (s) => document.querySelector(s);
   var escape2 = (s) => String(s ?? "").replace(
     /[&<>"']/g,
@@ -7906,7 +7906,7 @@ var qrcode = function() {
     toast.timer = setTimeout(() => $("#toast").classList.remove("show"), 3500);
   }
 
-  // js/experience/sound.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/sound.js
   var Sound = class {
     constructor() {
       this.audio = new Audio();
@@ -8107,7 +8107,7 @@ var qrcode = function() {
     }
   };
 
-  // js/vendor/three.module.min.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/vendor/three.module.min.js
   /**
    * @license
    * Copyright 2010-2024 Three.js Authors
@@ -17865,7 +17865,7 @@ var qrcode = function() {
   var Jm = new Ci();
   "undefined" != typeof __THREE_DEVTOOLS__ && __THREE_DEVTOOLS__.dispatchEvent(new CustomEvent("register", { detail: { revision: t } })), "undefined" != typeof window && (window.__THREE__ ? console.warn("WARNING: Multiple instances of Three.js being imported.") : window.__THREE__ = t);
 
-  // js/experience/galaxy-shaders.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/galaxy-shaders.js
   var noise = \`
 float hash(vec3 p){p=fract(p*.1031);p+=dot(p,p.yzx+33.33);return fract((p.x+p.y)*p.z);}
 float noise3(vec3 p){vec3 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(mix(hash(i),hash(i+vec3(1,0,0)),f.x),mix(hash(i+vec3(0,1,0)),hash(i+vec3(1,1,0)),f.x),f.y),mix(mix(hash(i+vec3(0,0,1)),hash(i+vec3(1,0,1)),f.x),mix(hash(i+vec3(0,1,1)),hash(i+vec3(1,1,1)),f.x),f.y),f.z);}
@@ -17908,7 +17908,7 @@ void main(){vec3 c=sampleAt(vUv)*.227027;c+=sampleAt(vUv+uDirection*1.384615)*.3
   var compositeFragment = \`varying vec2 vUv;uniform sampler2D uScene,uBloom;uniform float uTime;
 void main(){vec3 c=texture2D(uScene,vUv).rgb+texture2D(uBloom,vUv).rgb*.52;c*=1.28; c=(c*(2.51*c+.03))/(c*(2.43*c+.59)+.14);c=pow(clamp(c,0.,1.),vec3(1./2.2));float v=1.-.17*pow(length((vUv-.5)*1.4),2.);c*=v;gl_FragColor=vec4(c,1.);}\`;
 
-  // js/experience/universe-canvas-fallback.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/universe-canvas-fallback.js
   var TAU = Math.PI * 2;
   var Universe = class {
     constructor(canvas) {
@@ -18300,7 +18300,7 @@ void main(){vec3 c=texture2D(uScene,vUv).rgb+texture2D(uBloom,vUv).rgb*.52;c*=1.
     }
   };
 
-  // js/experience/universe.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/universe.js
   var TAU2 = Math.PI * 2;
   var clamp2 = Zn.clamp;
   function material(vertexShader, fragmentShader, uniforms = {}, extra = {}) {
@@ -18908,7 +18908,7 @@ void main(){vec3 c=texture2D(uScene,vUv).rgb+texture2D(uBloom,vUv).rgb*.52;c*=1.
     return t2 * t2 * (3 - 2 * t2);
   }
 
-  // js/screen.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/screen.js
   var universe = new Universe2($("#universe"));
   var sound = new Sound();
   var sid = uid();
@@ -18982,7 +18982,28 @@ void main(){vec3 c=texture2D(uScene,vUv).rgb+texture2D(uBloom,vUv).rgb*.52;c*=1.
     mountVideos($("#screen-ui"), { reduced: !!state.accessibility?.reduced });
     drawPhoneQR();
   }
+  var audioGeneration = 0;
+  var isStandby = () => ["idle", "ready"].includes(state.phase);
+  async function playStandby() {
+    const generation = audioGeneration;
+    const resumed = sound.unlock();
+    sound.setLevel(0.18);
+    if (sound.ctx?.state !== "running") parent.bodybeatDemo.audioState(false);
+    const [url] = await Promise.all([
+      parent.bodybeatDemo.media(info.tracks[0].url),
+      resumed
+    ]);
+    if (generation !== audioGeneration || !isStandby()) return;
+    if (sound.audio.src !== url) {
+      sound.audio.src = url;
+      sound.audio.currentTime = 0;
+    }
+    await sound.audio.play();
+    if (generation === audioGeneration && isStandby())
+      parent.bodybeatDemo.audioState(true);
+  }
   async function enter(next) {
+    audioGeneration++;
     clearTimeout(stageTimer);
     phase = next;
     narrationGeneration++;
@@ -19066,9 +19087,10 @@ void main(){vec3 c=texture2D(uScene,vUv).rgb+texture2D(uBloom,vUv).rgb*.52;c*=1.
       await finish();
     }
     if (next === "complete") sound.pause();
-    if (next === "idle") {
-      await sound.load(info.tracks[0]);
-      sound.pause();
+    if (["idle", "ready"].includes(next)) {
+      playStandby().catch(() => {
+        if (isStandby()) parent.bodybeatDemo.audioState(false);
+      });
     }
   }
   function move(limb, intensity = 1) {
@@ -19324,6 +19346,7 @@ void main(){vec3 c=texture2D(uScene,vUv).rgb+texture2D(uBloom,vUv).rgb*.52;c*=1.
   }
   window.demoScreen = {
     async unlock() {
+      if (isStandby()) return playStandby();
       await sound.unlock();
       if (state.phase === "playing") {
         await sound.play();
@@ -19334,6 +19357,7 @@ void main(){vec3 c=texture2D(uScene,vUv).rgb+texture2D(uBloom,vUv).rgb*.52;c*=1.
       testMove(limb);
     }
   };
+  document.addEventListener("click", () => parent.bodybeatDemo.enableSound(), true);
 })();
 <\/script>
   </body>
@@ -26153,7 +26177,7 @@ var qrcode = function() {
 }));
 <\/script>
     <script>(() => {
-  // js/i18n.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/i18n.js
   var languages = [
     ["zh-CN", "\\u7B80\\u4F53\\u4E2D\\u6587"],
     ["zh-TW", "\\u7E41\\u9AD4\\u4E2D\\u6587"],
@@ -26466,7 +26490,7 @@ var qrcode = function() {
     if (!englishSources.has(english)) englishSources.set(english, source);
   }
 
-  // js/shared/ui.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/ui.js
   var $ = (s) => document.querySelector(s);
   var escape = (s) => String(s ?? "").replace(
     /[&<>"']/g,
@@ -26497,7 +26521,7 @@ var qrcode = function() {
     return \`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">\${paths[name] || paths.star}</svg>\`;
   }
 
-  // js/shared/dialog.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/dialog.js
   function dialogHeader(title, id) {
     return \`<header class="ui-dialog-header"><h2 class="ui-dialog-title" id="\${id}" tabindex="-1">\${escape(title)}</h2><button type="button" class="ui-close" data-ui-close aria-label="\${escape(translate("Close"))}"><span aria-hidden="true">\\xD7</span></button></header>\`;
   }
@@ -26571,7 +26595,7 @@ var qrcode = function() {
     });
   }
 
-  // js/shared/video.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/video.js
   function loopVideo(name, className = "") {
     const base = \`assets/video/\${name}\`;
     return \`<video class="\${className}" data-loop-video autoplay loop muted playsinline preload="auto" poster="\${base}.jpg" aria-hidden="true" disablepictureinpicture><source src="\${base}.mp4" type="video/mp4"></video>\`;
@@ -26607,7 +26631,7 @@ var qrcode = function() {
     }
   });
 
-  // js/experience/motion-math.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/motion-math.js
   function normalized(q) {
     if (!Array.isArray(q) || q.length !== 4 || !q.every(Number.isFinite))
       return null;
@@ -26631,7 +26655,7 @@ var qrcode = function() {
     return Math.acos(Math.max(-1, Math.min(1, dot))) * 180 / Math.PI;
   }
 
-  // js/experience/motion-profile.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/motion-profile.js
   var wristProfile = {
     leftArm: {
       source: "A1327",
@@ -26653,7 +26677,7 @@ var qrcode = function() {
     }
   };
 
-  // js/experience/motion.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/experience/motion.js
   var limbs = ["leftArm", "rightArm", "leftLeg", "rightLeg"];
   var labels = [
     "Left wrist",
@@ -26781,7 +26805,7 @@ var qrcode = function() {
     }
   };
 
-  // js/guides.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/guides.js
   var ink = "#f0ecf6";
   var accent = "#c7afe9";
   var clamp = (x) => Math.max(0, Math.min(1, x));
@@ -26902,7 +26926,7 @@ var qrcode = function() {
     });
   }
 
-  // js/shared/api.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/api.js
   var demo = window.parent.bodybeatDemo;
   if (!demo) {
     location.replace(new URL("index.html", location.href));
@@ -26913,7 +26937,7 @@ var qrcode = function() {
   var upload = (kind, blob) => demo.upload(kind, blob);
   var storage = demo.storage;
 
-  // js/mobile/profile.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/profile.js
   var read = (k, f) => {
     try {
       return JSON.parse(storage.getItem(k)) ?? f;
@@ -26932,7 +26956,7 @@ var qrcode = function() {
     );
   }
 
-  // js/archive.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/archive.js
   var items = [];
   var filter = "all";
   var opened = null;
@@ -27096,7 +27120,7 @@ var qrcode = function() {
     });
   }
 
-  // js/mobile/components.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/components.js
   var button = (text, act, cls = "primary", disabled = false) => \`<button class="button \${cls}" data-action="\${act}" \${disabled ? "disabled" : ""}>\${text}\${icon("arrow")}</button>\`;
   var head = (title, sub = "") => \`<h1 class="page-title">\${title}</h1>\${sub ? \`<p class="page-sub">\${sub}</p>\` : ""}\`;
   var avatar = (src, name, cls = "") => \`<img class="profile-avatar \${cls}" src="\${escape(src || avatarOptions[0])}" alt="\${escape(name || "Avatar")}">\`;
@@ -27115,7 +27139,7 @@ var qrcode = function() {
     return '<svg class="tap-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 18V9a2.2 2.2 0 0 1 4.4 0v8-3a2.2 2.2 0 0 1 4.4 0v3-1a2.2 2.2 0 0 1 4.4 0v5c0 6-3 8-7 8h-2c-2 0-3.5-1-5-3l-5-6a2.2 2.2 0 0 1 3-3l3 3"/></svg>';
   }
 
-  // js/mobile/views.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/views.js
   function createViews(context) {
     let {
       route: route2,
@@ -27213,7 +27237,7 @@ var qrcode = function() {
     return { content: content2, people };
   }
 
-  // js/mobile/accessibility-translations.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/accessibility-translations.js
   var accessibilityTranslations = {
     "en-US": [
       "Accessibility and privacy",
@@ -27679,7 +27703,7 @@ var qrcode = function() {
     "\\u4F60\\u7684\\u8EAB\\u4F53\\uFF0C\\u4F60\\u7684\\u8282\\u594F\\uFF0C\\u4F60\\u7684\\u9009\\u62E9\\u3002"
   ];
 
-  // js/mobile/accessibility-dialog.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/accessibility-dialog.js
   var content = \`
 <h2 id="accessibility-title">Accessibility and privacy</h2>
 <p><strong>BODY//BEAT aims to offer a more inclusive, comfortable interactive experience for people with low vision, hearing disabilities, and different languages, physical abilities and interaction needs.</strong></p>
@@ -27730,7 +27754,7 @@ var qrcode = function() {
     showDialog(dialog);
   }
 
-  // js/mobile/reading-voice.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/reading-voice.js
   function readingVoice(voices, language2) {
     const normalized2 = (lang) => lang.replaceAll("_", "-").toLowerCase();
     const wanted = normalized2(language2);
@@ -27756,7 +27780,7 @@ var qrcode = function() {
     return ordinary.find((voice) => normalized2(voice.lang) === wanted && voice.default) || ordinary.find((voice) => normalized2(voice.lang) === wanted) || ordinary[0];
   }
 
-  // js/mobile/reader.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/reader.js
   function createReader(getProfile) {
     let voiceList = [];
     const refreshVoices = () => {
@@ -27822,7 +27846,7 @@ var qrcode = function() {
     return speak2;
   }
 
-  // js/mobile/upload.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/upload.js
   async function uploadImage(file, crop = false) {
     if (!file) return null;
     const url = URL.createObjectURL(file);
@@ -27858,7 +27882,7 @@ var qrcode = function() {
     }
   }
 
-  // js/mobile/profile-dialog.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile/profile-dialog.js
   function openProfile({ profile: profile2, memberId: memberId2, persist: persist2, render: render2, speak: speak2 }) {
     const trigger = document.activeElement;
     const dialog = document.createElement("dialog");
@@ -27923,7 +27947,7 @@ var qrcode = function() {
     };
   }
 
-  // js/shared/identity.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/shared/identity.js
   function uid() {
     if (globalThis.crypto?.randomUUID) return crypto.randomUUID();
     const bytes = new Uint8Array(16);
@@ -27932,7 +27956,7 @@ var qrcode = function() {
     return Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("");
   }
 
-  // js/mobile.js
+  // 2200/bodybeat_demo_fullscreen/BODYBEAT_Demo/js/mobile.js
   for (const src of [
     "assets/music-covers.png",
     "assets/music-soft-covers.png",
@@ -28682,6 +28706,10 @@ var qrcode = function() {
     ...demo,
     media: mediaURL,
     scan,
+    enableSound,
+    audioState(playing) {
+      $("#sound").hidden = playing;
+    },
     phoneRoute(next) {
       route = next;
       update(demo.snapshot());
@@ -28704,6 +28732,7 @@ var qrcode = function() {
     });
   }
   async function enableSound() {
+    if (!display.contentWindow.demoScreen) return;
     try {
       await display.contentWindow.demoScreen.unlock();
       $("#sound").hidden = true;
@@ -28762,8 +28791,10 @@ var qrcode = function() {
     if (limb) move(limb);
   }
   document.addEventListener("keydown", keyboard);
+  document.addEventListener("click", enableSound, true);
   phone.addEventListener("load", () => {
     phone.contentDocument?.addEventListener("keydown", keyboard);
+    phone.contentDocument?.addEventListener("click", enableSound, true);
   });
   function fit() {
     const padding = Math.min(24, innerWidth * 0.016), gap = Math.min(32, innerWidth * 0.022);
