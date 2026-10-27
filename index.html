@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08080c">
+  <title>BODY//BEAT</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23c7afe9' d='M16 0Q18 14 32 16Q14 18 16 32Q14 18 0 16Q14 14 16 0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="demo/presentation.css">
+</head>
+<body>
+  <main aria-label="BODY BEAT interactive prototype">
+    <section id="display-frame" class="display-frame" aria-label="Large display">
+      <iframe id="display" title="BODY BEAT large display" allow="autoplay; fullscreen"></iframe>
+      <div class="movement-controls" id="movement-controls" aria-label="Simulated movements" hidden>
+        <button data-limb="leftArm"><span aria-hidden="true">↖</span> Left hand <kbd>Q</kbd></button>
+        <button data-limb="rightArm"><span aria-hidden="true">↗</span> Right hand <kbd>W</kbd></button>
+        <button data-limb="leftLeg"><span aria-hidden="true">↑</span> Left foot <kbd>A</kbd></button>
+        <button data-limb="rightLeg"><span aria-hidden="true">↑</span> Right foot <kbd>S</kbd></button>
+      </div>
+    </section>
+    <section id="phone-space" class="phone-space" aria-label="Phone controller">
+      <div id="phone-body" class="phone-body">
+        <div class="phone-camera" aria-hidden="true"></div>
+        <div class="phone-statusbar" aria-hidden="true"><span>9:41</span></div>
+        <div class="phone-glass"><iframe id="phone" title="BODY BEAT phone controller" allow="autoplay" tabindex="-1"></iframe></div>
+        <div class="home-indicator" aria-hidden="true"></div>
+        <div class="phone-side-button" aria-hidden="true"></div>
+      </div>
+      <div class="floating-card scan-card" id="scan-card"><p>Click the QR code to turn on the phone.</p><button id="scan" disabled>Loading…</button></div>
+      <div class="floating-card wear-card" id="wear-card" hidden><button id="wear">Simulate wearing sensors</button></div>
+    </section>
+  </main>
+  <nav class="tools" aria-label="Demo controls">
+    <button id="fullscreen" aria-label="Full screen" title="Full screen">⛶</button>
+    <button id="reset" aria-label="Restart demo" title="Restart demo">↻</button>
+    <button id="help" aria-label="Help" title="Help">?</button>
+    <button id="sound" aria-label="Enable sound" title="Enable sound" hidden>♪</button>
+  </nav>
+  <aside id="tip" class="tip" role="status" hidden><span id="tip-text"></span><button id="close-tip" aria-label="Dismiss hint">×</button></aside>
+  <noscript>Enable JavaScript to view the prototype.</noscript>
+  <script defer src="demo/runtime.js"></script>
+</body>
+</html>

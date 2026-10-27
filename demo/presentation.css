@@ -1,0 +1,40 @@
+:root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #f3eef8; background: #08080c; }
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: radial-gradient(ellipse at 70% 50%, #1d1824, #08080c 72%); }
+button { font: inherit; cursor: pointer; touch-action: manipulation; }
+button:disabled { cursor: default; opacity: .5; }
+button:focus-visible { outline: 2px solid #d9b9f5; outline-offset: 4px; }
+[hidden] { display: none !important; }
+.display-frame { position: absolute; background: #08080b; overflow: hidden; border-radius: 12px; box-shadow: 0 0 0 1px #38313e, 0 20px 70px #0006; }
+.display-frame iframe { width: 1280px; height: 720px; position: absolute; top: 0; left: 0; transform-origin: top left; border: 0; }
+.phone-space { position: absolute; }
+.phone-body { position: absolute; top: 0; left: 0; width: 414px; height: 916px; border-radius: 58px; background: #030304; box-shadow: inset 0 0 0 2px #77717e, inset 0 0 0 5px #242128, 0 20px 50px #0008; transform-origin: top left; }
+.phone-glass { position: absolute; left: 12px; top: 38px; width: 390px; height: 844px; background: #000; overflow: hidden; border-radius: 28px; }
+.phone-glass iframe { display: block; width: 390px; height: 844px; border: 0; visibility: hidden; }
+.phone-body.on iframe { visibility: visible; }
+.phone-camera { position: absolute; width: 102px; height: 22px; background: #070709; border-radius: 20px; left: 156px; top: 9px; z-index: 2; box-shadow: inset 0 0 0 1px #151219; }
+.phone-camera::after { content: ""; width: 7px; height: 7px; background: #111b2b; border: 2px solid #13111a; border-radius: 50%; position: absolute; top: 7px; right: 12px; }
+.phone-statusbar { position: absolute; top: 14px; left: 29px; right: 29px; font-size: 12px; display: flex; justify-content: space-between; opacity: 0; }
+.phone-body.on .phone-statusbar { opacity: 1; }
+.home-indicator { position: absolute; left: 145px; bottom: 13px; width: 124px; height: 4px; border-radius: 10px; background: #afacb3; opacity: .2; }
+.phone-body.on .home-indicator { opacity: .8; }
+.phone-side-button { position: absolute; right: -3px; top: 180px; width: 3px; height: 65px; border-radius: 0 3px 3px 0; background: #817987; }
+.floating-card { position: absolute; left: 7%; right: 7%; border: 1px solid #756086; border-radius: 16px; padding: 15px; background: #2c2337ef; box-shadow: 0 12px 30px #0007; backdrop-filter: blur(18px); text-align: center; z-index: 3; }
+.scan-card { top: 45%; transform: translateY(-20%); }
+.floating-card p { font-size: clamp(12px,1vw,15px); line-height: 1.5; margin: 0 0 14px; color: #e2d6eb; }
+.floating-card button { width: 100%; padding: 12px 8px; border: 1px solid #c69de3; border-radius: 9px; color: #180e20; font-weight: 600; font-size: clamp(11px, .95vw, 14px); background: #c4a3dd; }
+.floating-card button:hover:not(:disabled) { background: #dcc0f0; }
+.wear-card { bottom: 4%; padding: 9px; }
+.tools { position: fixed; top: 10px; left: 14px; display: flex; gap: 5px; z-index: 5; }
+.tools button { width: 30px; height: 30px; border: 1px solid #66547550; border-radius: 50%; color: #b5a3c5; font-size: 17px; background: #201a29aa; backdrop-filter: blur(12px); }
+.tools button:hover { color: white; background: #49344f; }
+.tip { position: fixed; top: 50px; left: 24px; max-width: min(450px, 62vw); display: flex; align-items: center; gap: 12px; border: 1px solid #655072; background: #2a2035ee; backdrop-filter: blur(18px); border-radius: 12px; padding: 13px 14px; box-shadow: 0 10px 30px #0006; z-index: 10; font-size: 13px; line-height: 1.5; }
+.tip button { border: 0; color: #d9c6e6; background: transparent; font-size: 22px; }
+.movement-controls { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; padding: 9px; border-radius: 16px; border: 1px solid #6652768c; background: #18121fe6; backdrop-filter: blur(18px); box-shadow: 0 6px 30px #0005; white-space: nowrap; }
+.movement-controls button { display: flex; align-items: center; gap: 8px; color: #ece2f3; background: #382a45; border: 1px solid #74598b; border-radius: 10px; font-size: clamp(11px, .95vw, 14px); padding: 12px; }
+.movement-controls button:hover, .movement-controls button.pressed { background: #72518b; border-color: #d2b4e8; }
+.movement-controls span { color: #cfafdf; font-size: 20px; }
+kbd { font-family: inherit; font-size: 10px; color: #b7a4c6; }
+@media(max-width: 900px) { .movement-controls { gap: 4px; padding: 5px; bottom: 8px; } .movement-controls button { padding: 8px 5px; gap: 4px; } kbd { display: none; } }
+@media(max-width: 600px) { .floating-card { padding: 8px; border-radius: 10px; } .floating-card p { font-size: 10px; } .floating-card button { font-size: 10px; padding: 8px 3px; } .movement-controls button { font-size: 8px; padding: 7px 4px; } .movement-controls span { display: none; } .tools { top: 5px; left: 6px; } }
