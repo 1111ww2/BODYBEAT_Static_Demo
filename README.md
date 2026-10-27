@@ -1,8 +1,5 @@
 # BODY//BEAT — Static Demo
 
-## Interface Guidelines
-
-The original interfaces and device proportions are preserved. The two devices fit the desktop viewport without page scrolling; the phone’s own pages still scroll normally. Simulation controls float over the presentation. Language, text size, contrast, reduced motion, read-aloud, and hearing feedback remain available. Participants and sensors are simulated within one tab; there is no real device connection or shared online storage.
 
 ## Assets and Licenses
 
